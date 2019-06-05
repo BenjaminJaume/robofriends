@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Card = () => {
+const Card = ({ name, email, id }) => {
   return (
-    <div>
-      <img src="https://robohash.org/1?200x200" alt="Robot" />
-      <div>
-        <h2>Jane Doe</h2>
-        <p>jane.doe@gmail.com</p>
+    <div className="card bg-primary d-inline-flex flex-wrap m-1 shadow-sm">
+      <div className="card-body text-center">
+        <img
+          className="hoverable"
+          src={`https://robohash.org/${id}?size=200x200`}
+          alt="Robot"
+        />
+        <p className="card-title">{name}</p>
+        <p>{email}</p>
       </div>
     </div>
   );
